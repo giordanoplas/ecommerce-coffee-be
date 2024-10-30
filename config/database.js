@@ -24,13 +24,13 @@ module.exports = ({ env }) => {
     },
     postgres: {
       connection: {
-        connectionString: env('DATABASE_URL', 'postgresql://root:p3MFAG8R8XA9jojOiBiJKTgwrgxULU5l@dpg-csh4eng8fa8c73979lm0-a.oregon-postgres.render.com/ecommerce_coffe_strapi'),
-        host: env('DATABASE_HOST', 'dpg-csh4eng8fa8c73979lm0-a.oregon-postgres.render.com'),
+        connectionString: env('DATABASE_URL', 'postgresql://root:p3MFAG8R8XA9jojOiBiJKTgwrgxULU5l@dpg-csh4eng8fa8c73979lm0-a/ecommerce_coffe_strapi'),
+        host: env('DATABASE_HOST', 'dpg-csh4eng8fa8c73979lm0-a'),
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'ecommerce_coffe_strapi'),
         user: env('DATABASE_USERNAME', 'root'),
         password: env('DATABASE_PASSWORD', 'p3MFAG8R8XA9jojOiBiJKTgwrgxULU5l'),
-        ssl: env.bool('DATABASE_SSL', true) && {
+        ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
           ca: env('DATABASE_SSL_CA', undefined),
